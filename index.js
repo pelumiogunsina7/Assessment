@@ -10,7 +10,7 @@ app.use(express.json())
 app.use(express.static('build'))
 import buyReqRoute from "./routes/buyRequest.js"
 //const Server = http.createServer()
-mongoose.connect(process.env.MONGO)
+mongoose.connect(process.env.MONGO_URI)
 
 mongoose.set('strictQuery', false)
 mongoose.connection.on("disconnected", () =>{
